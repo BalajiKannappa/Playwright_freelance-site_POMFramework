@@ -6,7 +6,7 @@ import { LoginPage } from "../../pages/LoginPage.js"
 import { HomePage } from "../../pages/HomePage.js"
 
 
-test.skip("Login Test using Loginpage Fixture", async function( {page, loginpage} )
+test("Login Test using Loginpage Fixture", async function( {page, loginpage} )
 
 {
     test.setTimeout(120000)
@@ -31,7 +31,7 @@ test.skip("Login Test using Loginpage Fixture", async function( {page, loginpage
 
 }),
 
-test.skip("Login Test using loginpageJSON fixture", async function ( { page, loginpageJSON} ){
+test("Login Test using loginpageJSON fixture", async function ( { page, loginpageJSON} ){
 
     await page.waitForTimeout(5000)
 

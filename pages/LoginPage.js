@@ -1,3 +1,5 @@
+import { BasePage } from './BasePage.js';
+
 
 class LoginPage extends BasePage
 {
@@ -9,6 +11,7 @@ class LoginPage extends BasePage
 
     constructor(page)
         {   
+            super();
             this.page = page
             this.#useridField = page.locator("#email1")
             this.#passwordField = page.locator("#password1")
