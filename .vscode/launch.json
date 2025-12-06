@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Playwright (Custom File)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+      "args": [
+        "test",
+        "${input:testFile}",     // 👈 ask which file to run
+        "--project=chromium",
+        "--headed",
+        //"--debug"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "testFile",
+      "type": "promptString",
+      "description": "Enter test file path (e.g., tests/login.spec.js)"
+    }
+  ]
+}
+
